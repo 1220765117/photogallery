@@ -1,0 +1,293 @@
+:root{
+
+/*---Fonts---*/
+--fonts: Arial, Helvetica, sans-serif;
+
+/*---Colors---*/
+--turqoise:#007d7b;
+--black: #000000;
+--white:#ffffff;
+}
+
+/*---Typography---*/
+p {
+    font-size: 1.25em;
+}
+
+figcaption, label, input, small {
+    font-size: 1em;
+}
+
+nav a {
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/*---HTML/Body/Header//Main--*/
+
+html{
+    background-color: #000000;
+}
+
+body{
+    margin: 0 auto;
+    font-family: var(--fonts);
+    min-width: 480px;
+    max-width: 1300px;
+}
+
+main{
+    margin: 0 auto;
+    width: 85%;
+    min-width: 480px;
+    max-width: 1300px;
+}
+
+/*---Header---*/
+header{
+    background-color: #ffffff;
+    color: #007d7b;
+    width: 85%;
+    margin: 0 auto;
+}
+
+h1{
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 0;
+}
+
+/*---Nav---*/
+nav{
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    transition: margin-left 0.5s ease;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+nav li{
+    display: inline-flex;
+}
+
+/*---About/Gallery H2/p---*/
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin: 5px auto;
+}
+
+p{
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+.contained p:first-of-type{
+    margin-bottom: 10px;
+}
+
+.contained p:nth-of-type(2){
+    margin-bottom: 10px;
+}
+
+.gallery p{
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.contained{
+    background-color:#ffffff;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+/*---Gallery---*/
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+.images{
+    position: relative;
+    flex: 0 0 calc(100%/6);
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+figcaption{
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.bottomWhite{
+    color: #ffffff;
+    bottom:10px;
+}
+
+.topWhite{
+    color: #ffffff;
+    top:10px;
+}
+
+.topBlack{
+    color: #000000;
+    top:10px;
+}
+
+.bottomBlack{
+    color: #000000;
+    bottom:10px;
+}
+
+/*---Buttons---*/
+[href="#top"] {
+    position:fixed;
+    z-index: 1;
+    bottom:0px;
+    right:0px;
+    border: 2px solid #ffffff;
+    padding: 15px 0;
+    font-size: 10px;
+  }
+
+  /*---Contact Form---*/
+
+.contact{
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+    width: 70%;
+}
+
+.contact h2, .contact p{
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+#contact form{
+    text-align: left;
+}
+
+.contact .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact label{
+    text-align: left;
+    padding-left: 10px; 
+    padding-top: 15px;
+}
+
+.contact label, ::placeholder{
+    text-transform: uppercase;
+}
+
+.contact input, .contact textarea{
+    height: 30px;
+    justify-self: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+::placeholder{
+    color: #007d7b;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.submit{
+    width: 60%;
+    margin: 15px auto;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px;
+    color:#ffffff;
+    background-color: #007d7b;
+    display: block;
+    font-weight: 600;
+}
+
+/*---Footer---*/
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:45px;
+    padding-bottom: 10px;
+}
+
+/*---Media Screen---*/
+
+@media screen and (min-width:880px) { 
+    .images{
+        flex: 0 0 calc(100%/3);
+    }
+}
+
+@media screen and (min-width:1300px) { 
+    .images{
+        flex: 0 0 calc(100%/4);
+    }
+
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    nav ul{
+        margin-left: auto;
+    }
+
+    header, main{
+        width: 100%;
+    }
+}
+
+/*---Hover---*/
+
+nav a:hover{
+    color: #007d7b;
+}
+
+[href="#top"]:hover{
+    color: #007d7b;
+    background-color: #ffffff;
+}
+
+.submit:hover{
+    color: #007d7b;
+    background-color: #ffffff;
+}
